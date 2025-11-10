@@ -89,7 +89,9 @@ st.markdown(f"""
 # ------------------------------------------------
 # HARI Career Report 안내 문구
 # ------------------------------------------------
-MAIN_IMG_PATH = "/Users/airim/github/hari_fold_django/llm_hub/rpa_llm/assets/main_2.png"
+MAIN_IMG_PATH = os.path.join(BASE_DIR, "assets", "main_2.png")
+
+
 
 def load_image_base64(path):
     """이미지를 base64로 읽어 HTML로 렌더링"""
@@ -347,7 +349,9 @@ if search_name.strip():
     unsafe_allow_html=True
 )
     col1, col2 = st.columns(2)
-    TRACK_IMAGE_PATH = "/Users/airim/github/hari_fold_django/llm_hub/rpa_llm/assets/track_image.png"
+    
+    TRACK_IMAGE_PATH = os.path.join(BASE_DIR, "assets", "track_image.png")
+
     base64_image_string = image_to_base64(TRACK_IMAGE_PATH)
     # === Generalist Track ===
     with col1:
