@@ -429,7 +429,8 @@ if search_name.strip():
 
     # === Specialist Track ===
     with col2:
-        image_path = "/Users/airim/github/hari_fold_django/llm_hub/rpa_llm/assets/hari_testimage.png"
+        # image_path = "/Users/airim/github/hari_fold_django/llm_hub/rpa_llm/assets/hari_testimage.png"
+        image_path = os.path.join(BASE_DIR, "assets", "hari_testimage.png")
         img_html = ""
         try:
             with open(image_path, "rb") as img_file:
