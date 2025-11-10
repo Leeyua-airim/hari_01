@@ -18,13 +18,24 @@ st.set_page_config(page_title="CDP 가이드 생성기", layout="wide")
 # ------------------------------------------------
 # 데이터 경로 (기존 경로 유지)
 # ------------------------------------------------
-EMPLOYEE_PATH = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only인사.xlsx"
-SCORE_PATH    = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only_specialist_generalist_score_result.xlsx"
-CAREER_PATH   = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only_발령정보_result.xlsx"
-LOGO_PATH     = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/assets/cj_company.png"
+BASE_DIR = os.path.dirname(__file__)
 
-EMP_PATH = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only_발령정보.xlsx"
-MAP_PATH = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/핵심직무_유사직무_매핑.xlsx"
+# EMPLOYEE_PATH = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only인사.xlsx"
+# SCORE_PATH    = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only_specialist_generalist_score_result.xlsx"
+# CAREER_PATH   = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only_발령정보_result.xlsx"
+# LOGO_PATH     = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/assets/cj_company.png"
+# 
+# EMP_PATH = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/only_발령정보.xlsx"
+# MAP_PATH = "/Users/airim/github/hari_fold_django/llm_hub/pred_llm/data/핵심직무_유사직무_매핑.xlsx"
+
+# 상대경로로 각 파일 지정
+EMPLOYEE_PATH = os.path.join(BASE_DIR, "data", "only인사.xlsx")
+SCORE_PATH    = os.path.join(BASE_DIR, "data", "only_specialist_generalist_score_result.xlsx")
+CAREER_PATH   = os.path.join(BASE_DIR, "data", "only_발령정보_result.xlsx")
+LOGO_PATH     = os.path.join(BASE_DIR, "assets", "cj_company.png")
+
+EMP_PATH = os.path.join(BASE_DIR, "data", "only_발령정보.xlsx")
+MAP_PATH = os.path.join(BASE_DIR, "data", "핵심직무_유사직무_매핑.xlsx")
 
 # ------------------------------------------------
 # 유틸
